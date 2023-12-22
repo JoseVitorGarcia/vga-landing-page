@@ -1,0 +1,98 @@
+/* Importação das fonts */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../../public/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+/* Variáveis de cor */
+:root{
+  --dark-brown: #2f170f;
+  --brown: #35281A;
+  --light-brown: #655642;
+  --beige: #D2CBC6;
+  --light-beige: #F6E1C5;
+  --dark-gray: #222222;
+  --gray: #404040;
+  --light-gray: #CECECE;
+  --test: #8897ac;
+  --white: #FFFFFF;
+  --black: #000000;
+  --gray-blue:#404760;
+  --opacity-blue:#6b749ec9  ; 
+  --black-tranparent-80: #000000cc;
+}
+
+/* Estilizações globais */
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat';
+  scroll-behavior: smooth;
+}
+
+/* width and color bg scroll*/
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--beige);
+}
+
+/* handle scroll */
+::-webkit-scrollbar-thumb {
+  background:  var(--gray-blue); 
+  border-radius: 3px;
+}
+
+/* handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-blue); 
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: var(--gray);
+}
+
+h1{
+  font-size: 28px;
+  font-weight: 700;
+}
+
+h2{
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h3{
+  font-size: 22px;
+  font-weight: 500;
+}
+
+h4{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+h5{
+  font-size: 18px;
+  font-weight: 400;
+}
+
+h6{
+  font-size: 16px;
+  font-weight: 400;
+}
+
+a, p, span, label {
+  font-size: 14px;
+  color: var(--light-gray);
+}
+
+a {
+  text-decoration: none;
+}

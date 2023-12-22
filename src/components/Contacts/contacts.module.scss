@@ -1,0 +1,167 @@
+// Estilizações da página de Contatos
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 90px;
+  .title {
+    color: var(--light-gray);
+    text-shadow: 1px 1px 1px var(--dark-gray);
+    margin: 20px 0;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+
+  .socialMediaButton {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: var(--light-gray);
+    background-color: rgba($color: transparent, $alpha: 0.5);
+    border: 1px solid var(--light-gray);
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba($color: transparent, $alpha: 1.0);
+    }
+    
+    .buttonTexts {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    
+      .contactName {
+        margin: 0;
+        color: var(--light-gray);
+        text-shadow: 0.5px 0.5px 1px var(--black);
+        font-weight: 600;
+      }
+
+      .contactDescription {
+        margin: 10px 0 0;
+        font-size: 10px;
+        color: var(--light-gray);
+      }
+    }
+  }
+
+  .mediasContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .whatsapp {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .divider {
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+    .mediasButtonContainer {
+      width: fill;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+.containerMobile{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px 0;
+
+    .socialMediaButton {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: var(--light-gray);
+    background-color: rgba($color: transparent, $alpha: 0.5);
+    border: 1px solid var(--light-gray);
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba($color: transparent, $alpha: 1.0);
+    }
+    
+    .buttonTexts {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    
+      .contactName {
+        margin: 0;
+        color: var(--light-gray);
+        text-shadow: 0.5px 0.5px 1px var(--black);
+        font-weight: 600;
+      }
+
+      .contactDescription {
+        margin: 10px 0 0;
+        font-size: 10px;
+        color: var(--light-gray);
+      }
+    }
+  }
+
+  .mediasContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .whatsapp {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .divider {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+    .mediasButtonContainer {
+      width: fill;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

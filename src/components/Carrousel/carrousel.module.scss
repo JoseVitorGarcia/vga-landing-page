@@ -1,0 +1,31 @@
+
+.carrouselWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: none;
+  margin-top: 80px;
+  border-radius: 10px;
+}
+
+.startTextContainer {
+  width: 100%;
+  height:100%;
+  background-color: var(--test);
+  position: relative;
+  z-index: 999;
+
+  border-radius: 10px;
+  padding: 48px;
+
+  li {
+    color: var(--black);
+    font-size: 18px;
+  }
+
+  h1 {
+    color: var(--white);
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+}
