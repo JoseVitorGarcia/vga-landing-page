@@ -94,7 +94,7 @@ export default function Carrousel() {
         showStatus={false}
       >
         {listObjectives.map((obj, index) => (
-          <div className={styles.startTextContainer} key={index}>
+          <div className={styles.carrosselModal} key={index}>
           
             <Image
               src={obj.src}

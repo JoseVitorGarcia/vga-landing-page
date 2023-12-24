@@ -9,22 +9,24 @@ import Image from "next/image";
 
 import { useMediaQuery } from "react-responsive";
 
+interface IObjectivesList {
+  name: string;
+  message?: string;
+  list: string[];
+}
+
+interface IOwnersList {
+  name: string;
+  about: string;
+  oab: string;
+  url: string;
+}
+
 export default function Home() {
-  const isMobile = useMediaQuery({ query: "(max-width: 794px)" });
 
-  interface IObjectivesList {
-    name: string;
-    message?: string;
-    list: string[];
-  }
+  const isMobile = useMediaQuery({maxWidth: 794  });
 
-  interface IOwnersList {
-    name: string;
-    about: string;
-    oab: string;
-    url: string;
-  }
-
+ 
   const ownersList: IOwnersList[] = [
     {
       name: "André Gonçalves Garcia",
@@ -69,9 +71,9 @@ export default function Home() {
     <div className={styles.container}>
       <nav className={`${styles.wrapperHeaderAndFooter} ${styles.header}`}>
         <div
-          className={`${
+          className={
             isMobile ? styles.headerContainerMobile : styles.headerContainer
-          }`}
+          }
         >
           <Image
             src="/img/logo-branco.png"
@@ -118,30 +120,29 @@ export default function Home() {
           </div>
         </section>
         <section id="objectives" className={styles.objectives}>
-        <div className={styles.historyContainer}>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              width: "100%",
-              height: "100%",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <h1>Sobre nós</h1>
+          <div className={styles.historyContainer}>
             <div
               style={{
                 display: "flex",
-                flexDirection: "row",
-                width: "100%",
-                height: "100%",
-                gap: "50px",
+                flexDirection: "column",
+                width: "100vw",
+                height: "100vh",
                 alignItems: "center",
                 justifyContent: "center",
               }}
             >
-              
+              <h1>Sobre nós</h1>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: isMobile ? "column" : "row",
+                  width: "100vw",
+                  height: "100vh",
+                  gap: "50px",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <div className={styles.startTextContainer}>
                   <h1>{listObjectives[0].name}</h1>
                   <ul>
@@ -185,46 +186,57 @@ export default function Home() {
               <div
                 style={{
                   display: "flex",
-                  flexDirection: "row",
+                  flexDirection: isMobile ? "column" : "row",
                   width: "100%",
                   height: "100%",
-                  gap: "50px",
                   alignItems: "center",
                   justifyContent: "center",
                 }}
               >
-                <div className={styles.aboutUsTextContainer}>
-                  <Image
-                    src="/img/Andre.jpeg"
-                    alt="image"
-                    width={200}
-                    height={200}
-                    style={{ borderRadius:'10px'}}
-                  />
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    width: "100%",
+                    height: "100%",
+                    gap: "50px",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <div className={styles.aboutUsTextContainer}>
+                    <Image
+                      src="/img/Andre.jpeg"
+                      alt="image"
+                      width={200}
+                      height={200}
+                      style={{ borderRadius: "10px" }}
+                    />
 
-                  <div style={{ display: "flex", flexDirection: "column" }}>
-                    <h2>{ownersList[0].name}</h2>
-                    <ul>
-                      <p>{ownersList[0].about}</p>
-                      <p>{`OAB/RS: ${ownersList[0].oab}`}</p>
-                    </ul>
+                    <div style={{ display: "flex", flexDirection: "column" }}>
+                      <h2>{ownersList[0].name}</h2>
+                      <ul>
+                        <p>{ownersList[0].about}</p>
+                        <p>{`OAB/RS: ${ownersList[0].oab}`}</p>
+                      </ul>
+                    </div>
                   </div>
-                </div>
 
-                <div className={styles.aboutUsTextContainer}>
-                  <Image
-                    src="/img/Gilmar.jpeg"
-                    alt="image"
-                    width={200}
-                    height={200}
-                    style={{ borderRadius:'10px'}}
-                  />
-                  <div style={{ display: "flex", flexDirection: "column" }}>
-                    <h2>{ownersList[1].name}</h2>
-                    <ul>
-                      <p>{ownersList[1].about}</p>
-                      <p>{`OAB/RS: ${ownersList[1].oab}`}</p>
-                    </ul>
+                  <div className={styles.aboutUsTextContainer}>
+                    <Image
+                      src="/img/Gilmar.jpeg"
+                      alt="image"
+                      width={200}
+                      height={200}
+                      style={{ borderRadius: "10px" }}
+                    />
+                    <div style={{ display: "flex", flexDirection: "column" }}>
+                      <h2>{ownersList[1].name}</h2>
+                      <ul>
+                        <p>{ownersList[1].about}</p>
+                        <p>{`OAB/RS: ${ownersList[1].oab}`}</p>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -12,11 +12,11 @@ export default function Contacts() {
 
   const mail = 'veroneziegarciaadvogados@gmail.com';
   const instagram = 'veronezigarciaadvogados';
-  const defaultMessage = `Olá,%20encontrei%20seu%20contato%20através%20do%20site%20da%20empresa%20Veronezi%20e%20Garcia%20-%20Assessoria%20Jurídica.%20Tenho%20interesse%20nos%20serviços%20da%20empresa,%20pode%20me%20ajudar?`;
+  const defaultMessage = `Olá,%20encontrei%20seu%20contato%20através%20do%20site%20do%20escritório%20Veronezi%20e%20Garcia%20-%20Assessoria%20Jurídica.%20Tenho%20interesse%20nos%20serviços%20da%20empresa,%20pode%20me%20ajudar?`;
 
   const contacts = [
     { name: 'André Gonçalves Garcia', phone: '51995438244' },
-    { name: 'Gilmar Veronezi Junior', phone: '51980307351' },
+    { name: 'Gilmar Veronezi Junior', phone: '51993931579' },
   ];
 
   const handleInstagram = () => {

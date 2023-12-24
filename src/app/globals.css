@@ -17,7 +17,7 @@
   --dark-gray: #222222;
   --gray: #404040;
   --light-gray: #CECECE;
-  --test: #8897ac;
+  --middle-gray: #8897ac;
   --white: #FFFFFF;
   --black: #000000;
   --gray-blue:#404760;
@@ -29,6 +29,7 @@
 html,
 body {
   max-width: 100vw;
+ 
   overflow-x: hidden;
   box-sizing: border-box;
   padding: 0;
